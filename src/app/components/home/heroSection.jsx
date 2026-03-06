@@ -4,6 +4,7 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <section className="relative h-[87.5vh] w-full overflow-hidden">
+      {/* <!-- gradient transition --> */}
       {/* Background Images */}
       <div className="absolute inset-0 flex">
         <div className="relative flex-1 hidden md:block">
