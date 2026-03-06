@@ -1,3 +1,5 @@
+import { NavigationBar } from "@/app/components/layout/navigationBar";
+
 export const metadata = {
   title: "Jasa Foto Wisuda Profesional | Graduation Service Jakarta",
   description:
@@ -49,11 +51,11 @@ export const metadata = {
   },
 };
 
-export default function GraduationPage() {
+export default function GraduationServicePage() {
   return (
-    <main style={{ padding: "40px" }}>
-      <h1>Graduation Service</h1>
-      <p>Layanan foto & video untuk acara wisuda.</p>
-    </main>
+    <>
+    <NavigationBar></NavigationBar>
+    <h1>graduation | service</h1>
+    </>
   );
 }

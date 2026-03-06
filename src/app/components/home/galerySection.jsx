@@ -90,13 +90,13 @@ export function GallerySection() {
   return (
     <section className="w-full bg-black text-white md:p-12">
       {/* header */}
-      <div className="text-center mt-12">
+      <div className="text-center pt-10">
         <h1 className="tracking-[6px] md:text-xl">PORTOFOLIO</h1>
         <h1 className="tracking-[4px] text-2xl md:text-5xl font-serif font-bold mt-4">
           HASIL KARYA KAMI
         </h1>
         {/* filter button */}
-        <div className="mt-5 mb-8">
+        <div className="mt-5 mb-8 flex gap-y-4 flex-wrap justify-center">
           {[
             "all",
             "graduation",
@@ -123,11 +123,11 @@ export function GallerySection() {
         </div>
 
         {/* GALLERY */}
-        <div className="flex flex-wrap justify-star w-full gap-5 ml-2 px-8">
+        <div className="flex flex-wrap justify-center w-full gap-5 ml-2 px-8">
           {filteredGalery.map((item) => (
             <div
               key={item.id}
-              className="relative h-[300px] w-[250px] md:h-[450px] md:w-[450px] overflow-hidden group"
+              className="relative h-[250px] w-[225px] md:h-[450px] md:w-[375px] overflow-hidden group"
             >
               <Image
                 src={item.src}
