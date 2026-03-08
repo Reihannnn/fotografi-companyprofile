@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-export function GallerySection({marginTopCustom}) {
+export function GallerySectionPortofolio({marginTopCustom}) {
   const [activeCategory, setActivateCategory] = useState("all");
 
   const galeryData = [
@@ -90,6 +90,41 @@ export function GallerySection({marginTopCustom}) {
       id: 18,
       category: "engagement",
       src: "/asset/image/engagement/engagement-2.webp",
+    },
+    {
+      id: 19,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-7.jpg",
+    },
+    {
+      id: 20,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-10.jpg",
+    },
+    {
+      id: 21,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-6.webp",
+    },
+    {
+      id: 22,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-04.webp",
+    },
+    {
+      id: 23,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-8.webp",
+    },
+    {
+      id: 24,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-05.jpg",
+    },
+    {
+      id: 25,
+      category: "graduation",
+      src: "/asset/image/graduation/graduation-9.webp",
     },
   ];
   const filteredGalery =

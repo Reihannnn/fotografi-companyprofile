@@ -51,11 +51,78 @@ export const metadata = {
   },
 };
 
-export default function GraduationServicePage() {
+import { ServiceDetail } from "@/app/components/page/service-detail";
+import { Footer } from "@/app/components/layout/footer";
+
+export default function GraduationPage() {
   return (
     <>
-    <NavigationBar></NavigationBar>
-    <h1>graduation | service</h1>
-    </>
-  );
+      <NavigationBar></NavigationBar>
+      <ServiceDetail
+      title="Graduation"
+      subtitle="Fotografi Wisuda"
+      description="Wisuda adalah pencapaian besar yang layak diabadikan. Dari foto individu hingga bersama sahabat dan keluarga, kami pastikan momen kebanggaan ini terabadikan dengan sempurna."
+      images={[
+        { src: "/asset/image/graduation/graduation-02.jpg", alt: "Solo graduation portrait" },
+        { src: "/asset/image/graduation/graduation-6.webp", alt: "solo graduation photo" },
+        { src: "/asset/image/graduation/graduation-03.webp", alt: "Group graduation photo" },
+        { src: "/asset/image/graduation/graduation-8.webp", alt: "Group graduation photo" },
+        { src: "/asset/image/graduation/graduation-10.jpg", alt: "graduation photo with Family" },
+        { src: "/asset/image/graduation/graduation-9.webp", alt: "graduation photo with ayang beb" },
+        { src: "/asset/image/graduation/graduation-11.jpg", alt: "graduation photo with happiness family" },
+      ]}
+      packages={[
+        {
+          name: "Solo",
+          price: "Rp 750.000",
+          features: [
+            "1 Fotografer",
+            "1 Lokasi Kampus",
+            "30 Menit Sesi",
+            "15+ Edited Photos",
+            "Soft Copy via Drive",
+          ],
+        },
+        {
+          name: "Duo / Sahabat",
+          price: "Rp 1.200.000",
+          popular: true,
+          features: [
+            "1 Fotografer",
+            "2 Lokasi Kampus",
+            "1 Jam Sesi",
+            "30+ Edited Photos",
+            "Untuk 2 Orang",
+            "Soft Copy via Drive",
+          ],
+        },
+        {
+          name: "Group",
+          price: "Rp 2.500.000",
+          features: [
+            "1 Fotografer + 1 Asisten",
+            "2 Lokasi Kampus",
+            "2 Jam Sesi",
+            "60+ Edited Photos",
+            "Hingga 10 Orang",
+            "Flash Drive",
+            "Online Gallery",
+          ],
+        },
+      ]}
+      includes={[
+        "Konsultasi Pose & Lokasi",
+        "Photo Editing Profesional",
+        "Candid & Formal Shots",
+        "Online Private Gallery",
+        "High Resolution Files",
+        "Quick Turnaround",
+        "Backup Data Aman",
+        "Revisi 1x",
+        "Delivery 3-5 Hari",
+      ]}
+      />
+      <Footer></Footer>
+      </>
+  )
 }

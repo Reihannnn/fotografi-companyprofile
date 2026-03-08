@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative h-[87.5vh] w-full overflow-hidden">
+    <section className="relative h-[95vh] w-full mt-20 overflow-hidden">
       {/* <!-- gradient transition --> */}
       {/* Background Images */}
       <div className="absolute inset-0 flex">
@@ -49,7 +49,7 @@ export function HeroSection() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-gray-300">
-          Kami menghadirkan keindahan dalam setiap bidikan. Wedding, Prewedding,
+          Kami menghadirkan keindahan dalam setiap momen indah yang tidak terlupakan. Wedding, Prewedding,
           Engagement, Graduation, dan Event.
         </p>
 

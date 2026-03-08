@@ -42,8 +42,8 @@ export function ServiceSection() {
   return (
     <section className="w-full text-white bg-black p-8">
       <div className="text-center mt-12">
-        <h1 className="tracking-[6px] md:text-xl">LAYANAN</h1>
-        <h1 className="tracking-[6px] text-2xl md:text-5xl font-serif font-bold mt-4 mb-4">
+        <h1 className="tracking-[6px] md:text-xl text-[#d3b08f]">LAYANAN</h1>
+        <h1 className="tracking-[6px] text-2xl md:text-5xl font-serif font-bold mt-4 mb-10">
           YANG KAMI TAWARKAN
         </h1>
       </div>
