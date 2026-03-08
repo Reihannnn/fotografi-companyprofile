@@ -172,7 +172,7 @@ export function GallerySectionPortofolio({marginTopCustom}) {
           {filteredGalery.map((item) => (
             <div
               key={item.id}
-              className="relative h-[250px] w-[225px] md:h-[450px] md:w-[375px] overflow-hidden group"
+              className="relative  h-[200px] w-[138px] md:h-[450px] md:w-[375px] overflow-hidden group"
             >
               <Image
                 src={item.src}
@@ -186,7 +186,7 @@ export function GallerySectionPortofolio({marginTopCustom}) {
 
               {/* Category Text */}
               <div className="absolute bottom-5 left-5 text-white opacity-0 group-hover:opacity-100 transition duration-300">
-                <p className="uppercase tracking-widest text-sm">
+                <p className="uppercase tracking-widest text-xs md:text-sm">
                   {item.category}
                 </p>
               </div>
