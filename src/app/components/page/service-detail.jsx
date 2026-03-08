@@ -12,18 +12,17 @@ export function ServiceDetail({
   includes,
 }) {
   return (
-    <div className="pt-25">
+    <div className="pt-25 bg-black">
       {/* Back Link */}
-      <div className="bg-background px-6 lg:px-8 pt-8">
-        <div className="mx-auto max-w-7xl">
+      <div className="px-6 lg:px-8 pt-8">
+        <div className="mx-auto max-w-7xl text-white">
           <Link
             href="/service"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             <span
-              className="text-xs uppercase tracking-[0.15em]"
-              style={{ fontFamily: "var(--font-inter)" }}
+              className="text-xs uppercase tracking-[0.15em]"              
             >
               Kembali ke Layanan
             </span>
@@ -32,7 +31,7 @@ export function ServiceDetail({
       </div>
 
       {/* Hero */}
-      <section className="bg-background py-16 px-6 lg:px-8">
+      <section className="bg-black py-16 px-6 lg:px-8">
         <div className="mx-auto max-w-7xl grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           <div>
             <p
@@ -41,11 +40,11 @@ export function ServiceDetail({
             >
               {subtitle}
             </p>
-            <h1 className="text-4xl font-bold text-foreground md:text-6xl">
+            <h1 className="text-4xl font-bold text-white md:text-6xl">
               {title}
             </h1>
             <p
-              className="mt-6 text-base leading-relaxed text-muted-foreground"
+              className="mt-6 text-white leading-relaxed text-muted-foreground"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {description}
@@ -74,9 +73,9 @@ export function ServiceDetail({
       </section>
 
       {/* Gallery */}
-      <section className="bg-card py-16 px-6 lg:px-8">
+      <section className="bg-black py-16 px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-2xl font-bold text-foreground mb-8 md:text-5xl">
+          <h2 className="text-2xl font-bold text-white mb-8 md:text-5xl">
             Galeri
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -95,9 +94,9 @@ export function ServiceDetail({
       </section>
 
       {/* What's Included */}
-      <section className="bg-background py-16 px-6 lg:px-8">
+      <section className="bg-black py-16 text-white px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-8 md:text-3xl">
+          <h2 className="text-2xl lg:text-4xl font-bold mb-8 md:text-3xl">
             Apa yang Anda Dapatkan
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -108,8 +107,7 @@ export function ServiceDetail({
               >
                 <Check className="h-4 w-4 text-[#d3b08f] shrink-0" />
                 <span
-                  className="text-s md:text-md text-foreground"
-                  style={{ fontFamily: "var(--font-inter)" }}
+                  className="text-s md:text-md text-white"                  
                 >
                   {item}
                 </span>
@@ -120,12 +118,11 @@ export function ServiceDetail({
       </section>
 
       {/* Pricing */}
-      <section className="bg-card py-16 px-6 lg:px-8">
+      <section className="bg-black py-16 px-6 lg:px-8 text-white">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <p
-              className="text-xl uppercase text-[#d3b08f] tracking-[0.3em] text-primary mb-4"
-              style={{ fontFamily: "var(--font-inter)" }}
+              className="text-xl uppercase text-[#d3b08f] tracking-[0.3em] mb-4"            
             >
               Paket Harga
             </p>
@@ -151,7 +148,7 @@ export function ServiceDetail({
                     Populer
                   </span>
                 )}
-                <h3 className="text-xl font-bold text-foreground">{pkg.name}</h3>
+                <h3 className="text-xl font-bold text-white">{pkg.name}</h3>
                 <p className="mt-2 text-3xl font-bold text-primary">
                   {pkg.price}
                 </p>
