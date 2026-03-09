@@ -14,11 +14,11 @@ export const metadata = {
     "foto wisuda profesional",
     "foto wisuda jabodetabek",
   ],
-  
-  // // 1. Menentukan URL Utama
-  // alternates: {
-  //   canonical: "https://domainkamu.com/service/graduation",
-  // },
+
+  // 1. Menentukan URL Utama
+  alternates: {
+    canonical: "https://fotografi-companyprofile.vercel.app/service/graduation",
+  },
 
   // 2. Mengatur Indexing
   robots: {
@@ -28,12 +28,13 @@ export const metadata = {
   // 3. OpenGraph (Facebook, WA, IG)
   openGraph: {
     title: "Jasa Foto Wisuda Profesional - Abadikan Momen Berhargamu",
-    description: "Layanan fotografi wisuda premium untuk semua jenjang pendidikan di Jabodetabek.",
-    url: "https://domainkamu.com/service/graduation",
-    siteName: "Nama Brand Kamu",
+    description:
+      "Layanan fotografi wisuda premium untuk semua jenjang pendidikan di Jabodetabek.",
+    url: "https://fotografi-companyprofile.vercel.app/service/graduation",
+    siteName: "hendrapotret",
     images: [
       {
-        url: "https://domainkamu.com/images/og-graduation.jpg", // Pastikan file ini ada
+        url: "/asset/image/graduation/graduation-05.jpg", // Pastikan file ini ada
         width: 1200,
         height: 630,
         alt: "Preview Jasa Foto Wisuda",
@@ -42,87 +43,129 @@ export const metadata = {
     locale: "id_ID",
     type: "website",
   },
-  // 4. Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    title: "Jasa Foto Wisuda Profesional Jakarta",
-    description: "Hasil foto premium untuk momen kelulusanmu.",
-    images: ["https://domainkamu.com/images/og-graduation.jpg"],
-  },
 };
 
 import { ServiceDetail } from "@/app/components/page/service-detail";
 import { Footer } from "@/app/components/layout/footer";
 
 export default function GraduationPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Jasa Foto Wisuda Hendrapotret",
+    serviceType: "Graduation Photography",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Hendrapotret",
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "Jakarta",
+        addressCountry: "ID",
+      },
+    },
+    description:
+      "Layanan fotografi wisuda  untuk semua jenjang pendidikan di Jabodetabek.",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "IDR",
+      lowPrice: "750000",
+      offerCount: "3",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <NavigationBar></NavigationBar>
       <ServiceDetail
-      title="Graduation"
-      subtitle="Fotografi Wisuda"
-      description="Wisuda adalah pencapaian besar yang layak diabadikan. Dari foto individu hingga bersama sahabat dan keluarga, kami pastikan momen kebanggaan ini terabadikan dengan sempurna."
-      images={[
-        { src: "/asset/image/graduation/graduation-02.jpg", alt: "Solo graduation portrait" },
-        { src: "/asset/image/graduation/graduation-6.webp", alt: "solo graduation photo" },
-        { src: "/asset/image/graduation/graduation-03.webp", alt: "Group graduation photo" },
-        { src: "/asset/image/graduation/graduation-8.webp", alt: "Group graduation photo" },
-        { src: "/asset/image/graduation/graduation-10.jpg", alt: "graduation photo with Family" },
-        { src: "/asset/image/graduation/graduation-9.webp", alt: "graduation photo with ayang beb" },
-        { src: "/asset/image/graduation/graduation-11.jpg", alt: "graduation photo with happiness family" },
-      ]}
-      packages={[
-        {
-          name: "Solo",
-          price: "Rp 750.000",
-          features: [
-            "1 Fotografer",
-            "1 Lokasi Kampus",
-            "30 Menit Sesi",
-            "15+ Edited Photos",
-            "Soft Copy via Drive",
-          ],
-        },
-        {
-          name: "Duo / Sahabat",
-          price: "Rp 1.200.000",
-          popular: true,
-          features: [
-            "1 Fotografer",
-            "2 Lokasi Kampus",
-            "1 Jam Sesi",
-            "30+ Edited Photos",
-            "Untuk 2 Orang",
-            "Soft Copy via Drive",
-          ],
-        },
-        {
-          name: "Group",
-          price: "Rp 2.500.000",
-          features: [
-            "1 Fotografer + 1 Asisten",
-            "2 Lokasi Kampus",
-            "2 Jam Sesi",
-            "60+ Edited Photos",
-            "Hingga 10 Orang",
-            "Flash Drive",
-            "Online Gallery",
-          ],
-        },
-      ]}
-      includes={[
-        "Konsultasi Pose & Lokasi",
-        "Photo Editing Profesional",
-        "Candid & Formal Shots",
-        "Online Private Gallery",
-        "High Resolution Files",
-        "Quick Turnaround",
-        "Backup Data Aman",
-        "Revisi 1x",
-        "Delivery 3-5 Hari",
-      ]}
+        title="Graduation"
+        subtitle="Fotografi Wisuda"
+        description="Wisuda adalah pencapaian besar yang layak diabadikan. Dari foto individu hingga bersama sahabat dan keluarga, kami pastikan momen kebanggaan ini terabadikan dengan sempurna."
+        images={[
+          {
+            src: "/asset/image/graduation/graduation-02.jpg",
+            alt: "Solo graduation portrait",
+          },
+          {
+            src: "/asset/image/graduation/graduation-6.webp",
+            alt: "solo graduation photo",
+          },
+          {
+            src: "/asset/image/graduation/graduation-03.webp",
+            alt: "Group graduation photo",
+          },
+          {
+            src: "/asset/image/graduation/graduation-8.webp",
+            alt: "Group graduation photo",
+          },
+          {
+            src: "/asset/image/graduation/graduation-10.jpg",
+            alt: "graduation photo with Family",
+          },
+          {
+            src: "/asset/image/graduation/graduation-9.webp",
+            alt: "graduation photo with ayang beb",
+          },
+          {
+            src: "/asset/image/graduation/graduation-11.jpg",
+            alt: "graduation photo with happiness family",
+          },
+        ]}
+        packages={[
+          {
+            name: "Solo",
+            price: "Rp 750.000",
+            features: [
+              "1 Fotografer",
+              "1 Lokasi Kampus",
+              "30 Menit Sesi",
+              "15+ Edited Photos",
+              "Soft Copy via Drive",
+            ],
+          },
+          {
+            name: "Duo / Sahabat",
+            price: "Rp 1.200.000",
+            popular: true,
+            features: [
+              "1 Fotografer",
+              "2 Lokasi Kampus",
+              "1 Jam Sesi",
+              "30+ Edited Photos",
+              "Untuk 2 Orang",
+              "Soft Copy via Drive",
+            ],
+          },
+          {
+            name: "Group",
+            price: "Rp 2.500.000",
+            features: [
+              "1 Fotografer + 1 Asisten",
+              "2 Lokasi Kampus",
+              "2 Jam Sesi",
+              "60+ Edited Photos",
+              "Hingga 10 Orang",
+              "Flash Drive",
+              "Online Gallery",
+            ],
+          },
+        ]}
+        includes={[
+          "Konsultasi Pose & Lokasi",
+          "Photo Editing Profesional",
+          "Candid & Formal Shots",
+          "Online Private Gallery",
+          "High Resolution Files",
+          "Quick Turnaround",
+          "Backup Data Aman",
+          "Revisi 1x",
+          "Delivery 3-5 Hari",
+        ]}
       />
       <Footer></Footer>
-      </>
-  )
+    </>
+  );
 }

@@ -2,19 +2,81 @@ import { ServiceDetail } from "@/app/components/page/service-detail";
 import { NavigationBar } from "@/app/components/layout/navigationBar";
 import { Footer } from "@/app/components/layout/footer";
 
+export const metadata = {
+  title: "Jasa Fotografi Event Profesional & Dokumentasi Acara - Hendrapotret",
+  description:
+    "Layanan dokumentasi event profesional: seminar, olahraga (padel), acara keagamaan, hingga gathering keluarga. Foto berkualitas dengan preview di hari yang sama!",
+  alternates: {
+    canonical: "https://fotografi-companyprofile.vercel.app/service/event",
+  },
+  openGraph: {
+    title: "Hendrapotret - Profesional Event Photography & Videography",
+    description:
+      "Abadikan momen penting acara Anda dengan tim dokumentasi ahli.",
+    images: [
+      {
+        url: "/asset/image/event/event-4.webp",
+        width: 1200,
+        height: 630,
+        alt: "Dokumentasi Seminar, Event sebuah acara oleh Hendrapotret",
+      },
+    ],
+    type: "website",
+  },
+};
+
 export default function EventPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Jasa Fotografi Event Hendrapotret",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Hendrapotret",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Jakarta", // Sesuaikan kota Anda
+        addressCountry: "ID",
+      },
+    },
+    description:
+      "Dokumentasi profesional untuk seminar, konferensi, gathering, gala dinner, dan event olahraga.",
+    serviceType: "Event Photography",
+    areaServed: "Jabodetabek",
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "IDR",
+      description: "Tersedia paket Half Day, Full Day, dan Corporate Coverage.",
+    },
+  };
   return (
     <>
-    <NavigationBar></NavigationBar>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <NavigationBar></NavigationBar>
       <ServiceDetail
         title="Event"
         subtitle="Fotografi Event"
         description="Dari seminar dan konferensi hingga gathering dan gala dinner, kami menyediakan dokumentasi profesional yang menangkap energi, momen penting, dan detail dari acara Anda."
         images={[
-          { src: "/asset/image/event/event-1.webp", alt: "padel event session" },
-          { src: "/asset/image/event/event-2.webp", alt: "event religious photo" },
-          { src: "/asset/image/event/event-3.webp", alt: "event for child photo session" },
-          { src: "/asset/image/event/event-4.webp", alt: "photo of event seminar" },
+          {
+            src: "/asset/image/event/event-1.webp",
+            alt: "padel event session",
+          },
+          {
+            src: "/asset/image/event/event-2.webp",
+            alt: "event religious photo",
+          },
+          {
+            src: "/asset/image/event/event-3.webp",
+            alt: "event for child photo session",
+          },
+          {
+            src: "/asset/image/event/event-4.webp",
+            alt: "photo of event seminar",
+          },
         ]}
         packages={[
           {
